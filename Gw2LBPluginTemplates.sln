@@ -3,9 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.27428.2015
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LBPluginTemplate", "..\..\..\Desktop\LBPluginTemplate\LBPluginTemplate.csproj", "{0381938E-E261-48C0-B098-716E9EAE4D02}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LBPluginTemplate", "LBPluginTemplate\LBPluginTemplate.csproj", "{0381938E-E261-48C0-B098-716E9EAE4D02}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PluginContracts", "..\..\..\Desktop\PluginContracts\PluginContracts.csproj", "{521929DC-7CAD-4CEE-BC99-F3A41E5E397C}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PluginContracts", "PluginContracts\PluginContracts.csproj", "{521929DC-7CAD-4CEE-BC99-F3A41E5E397C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
