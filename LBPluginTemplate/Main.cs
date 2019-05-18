@@ -17,9 +17,9 @@ namespace LBPluginTemplate
         PluginInfo plugininfo = new PluginInfo
         {
             Name = "Examplename",                                   //Name of your plugin
-            Version = "1.0.0",                                      //Version of your plugin
+            Version = new Version("1.0.0"),                                      //Version of your plugin
             Author = "TheCheatsrichter",                            //Your name ;)
-            Url = "www.google.com",                                 //The URL associated with your plugin-> website/ githubpage etc.
+            Url = new Uri("https://google.com"),                                 //The URL associated with your plugin-> website/ githubpage etc.
             Description = "I like turtles",
         };
 
@@ -42,7 +42,7 @@ namespace LBPluginTemplate
 
         public bool IsUpToDate { get { return true; } }             //Return if your plugin is on the newest Version
         public bool Verify { get { return true; } }                 //Return if your plugin has set up everything successfully to work, will be used to check if the plugin should be run
-        public bool Update() { return true; }                       //Update your plugin to the newest version and return if the update was successfull, make sure that your plugininfo.name is the name of the .dll file
+        public string Update() { return ""; }                       //Update your plugin to the newest version and return if the update was successfull, make sure that you return the correct pathg of the new dll
         public bool Install() { return true; }                      //Install your plugin and set every thing up, will only be called when the plugin got added
         public bool Uninstall() { return true; }                    //Cleanup all files/settings associated with your plugin
 

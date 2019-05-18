@@ -10,8 +10,8 @@ namespace PluginContracts
     {
         public string Name { get; set; }
         public string Author { get; set; }
-        public string Version { get; set; }
-        public string Url { get; set; }
+        public Version Version { get; set; }
+        public Uri Url { get; set; }
         public string Description { get; set; }
     }
 
@@ -23,7 +23,7 @@ namespace PluginContracts
         bool Uninstall();
         bool IsUpToDate { get; }
         bool Verify { get; }
-        bool Update();
+        string Update();
     }
 
     public interface LBPlugin : IPlugin
