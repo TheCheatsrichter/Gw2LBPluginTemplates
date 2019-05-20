@@ -19,7 +19,6 @@ namespace PluginContracts
     {
         PluginInfo PluginInfo { get; }
         bool Init();
-        bool Install();
         bool Uninstall();
         bool IsUpToDate { get; }
         bool Verify { get; }
