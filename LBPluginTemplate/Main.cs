@@ -11,16 +11,16 @@ using PluginContracts.EventArguments;
 
 namespace LBPluginTemplate
 {
-    public class Plugin : PluginContracts.LBPlugin
+    public class Plugin : PluginContracts.ILBPlugin
     {
         //Your Plugin Information
         PluginInfo plugininfo = new PluginInfo
         {
-            Name = "Examplename",                                   //Name of your plugin
-            Version = new Version("1.0.0"),                                      //Version of your plugin
+            Name = "Examplename Plugin 2",                                   //Name of your plugin, this must not change over versions!!
+            Version = new Version("3.0.0"),                                      //Version of your plugin
             Author = "TheCheatsrichter",                            //Your name ;)
             Url = new Uri("https://google.com"),                                 //The URL associated with your plugin-> website/ githubpage etc.
-            Description = "I like turtles",
+            Description = "I like turtles even more times 3000",
         };
 
         public PluginInfo PluginInfo { get { return plugininfo; } }
@@ -42,7 +42,7 @@ namespace LBPluginTemplate
 
         public bool IsUpToDate { get { return true; } }             //Return if your plugin is on the newest Version
         public bool Verify { get { return true; } }                 //Return if your plugin has set up everything successfully to work, will be used to check if the plugin should be run
-        public string Update() { return "myfilelocation"; }                       //Update your plugin to the newest version and return if the update was successfull, make sure that you return the correct pathg of the new dll
+        public string Update() { return @"C:\Users\Adrian\Desktop\Plugin1.dll"; }                       //Update your plugin to the newest version and return if the update was successfull, make sure that you return the correct pathg of the new dll
         public bool Uninstall() { return true; }                    //Cleanup all files/settings associated with your plugin
 
         //Account specific client events, will be called by Launchbuddy
