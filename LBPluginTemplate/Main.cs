@@ -1,11 +1,7 @@
 ﻿using PluginContracts;
 using PluginContracts.ObjectInterfaces;
 using System;
-using System.Collections.Generic;
 using System.Collections.ObjectModel;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Controls;
 using PluginContracts.EventArguments;
 
@@ -20,17 +16,17 @@ namespace LBPluginTemplate
             Version = new Version("1.0.0"),                                      //Version of your plugin
             Author = "TheCheatsrichter",                            //Your name ;)
             Url = new Uri("https://google.com"),                                 //The URL associated with your plugin-> website/ githubpage etc.
-            Description = "I like turtles",
+            Description = "Plugin old",
         };
 
         public PluginInfo PluginInfo { get { return plugininfo; } }
 
         //General LB Data
         private ObservableCollection<IAcc> accs;
-        private IEnviroment enviroment;
+        private IEnvironment environment;
 
         public ObservableCollection<IAcc> Accounts { set { accs = value; } get { return accs; } }   //A collection of all Accounts in LB with various functions
-        public IEnviroment Enviroment { set { Enviroment = value; } get { return enviroment; } }    //Important LB folder,filepaths and client information
+        public IEnvironment Environment { set { environment = value; } get { return environment; } }    //Important LB folder,filepaths and client information
 
         //Your Plugin Handling
 
@@ -40,9 +36,9 @@ namespace LBPluginTemplate
             return true;
         }
 
-        public bool IsUpToDate { get { return true; } }             //Return if your plugin is on the newest Version
+        public bool IsUpToDate { get { return false; } }             //Return if your plugin is on the newest Version
         public bool Verify { get { return true; } }                 //Return if your plugin has set up everything successfully to work, will be used to check if the plugin should be run
-        public string Update() { return ""; }                       //Update your plugin to the newest version and return if the update was successfull, make sure that your plugininfo.name is the name of the .dll file
+        public string Update() { return @"newplugin.dll"; }                       //Update your plugin to the newest version and return if the update was successfull, make sure that your plugininfo.name is the name of the .dll file
         public bool Install() { return true; }                      //Install your plugin and set every thing up, will only be called when the plugin got added
         public bool Uninstall() { return true; }                    //Cleanup all files/settings associated with your plugin
 
