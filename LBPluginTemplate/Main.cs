@@ -12,11 +12,11 @@ namespace LBPluginTemplate
         //Your Plugin Information
         PluginInfo plugininfo = new PluginInfo
         {
-            Name = "Examplename",                                   //Name of your plugin
-            Version = new Version("1.0.0"),                                      //Version of your plugin
+            Name = "Taco Multiboxing",                                   //Name of your plugin
+            Version = new Version("0.1.0"),                                      //Version of your plugin
             Author = "TheCheatsrichter",                            //Your name ;)
-            Url = new Uri("https://google.com"),                                 //The URL associated with your plugin-> website/ githubpage etc.
-            Description = "Plugin old",
+            Url = new Uri("https://github.com/TheCheatsrichter/Gw2LBPluginTemplates/tree/LBTacoPlugin"),                                 //The URL associated with your plugin-> website/ githubpage etc.
+            Description = "Gw2 Launchbuddy plugin to support Gw2 TACO in multiboxing mode.",
         };
 
         public PluginInfo PluginInfo { get { return plugininfo; } }
@@ -38,7 +38,10 @@ namespace LBPluginTemplate
 
         public bool IsUpToDate { get { return false; } }             //Return if your plugin is on the newest Version
         public bool Verify { get { return true; } }                 //Return if your plugin has set up everything successfully to work, will be used to check if the plugin should be run
-        public string Update() { return @"newplugin.dll"; }                       //Update your plugin to the newest version and return if the update was successfull, make sure that your plugininfo.name is the name of the .dll file
+        public string Update() {
+
+            return;
+        }                       //Update your plugin to the newest version and return if the update was successfull, make sure that your plugininfo.name is the name of the .dll file
         public bool Install() { return true; }                      //Install your plugin and set every thing up, will only be called when the plugin got added
         public bool Uninstall() { return true; }                    //Cleanup all files/settings associated with your plugin
 
